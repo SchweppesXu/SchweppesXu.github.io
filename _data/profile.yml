@@ -3,7 +3,7 @@ secondary_name: ""
 navbar_name: "Yiquan Xu"
 
 positions:
-- logo: /assets/images/badges/profile.png  # Logo is optional
+#- logo: /assets/images/badges/profile.png  # Logo is optional
 #  name: Position 1 with logo
 #- name: Position 2 without logo
 
@@ -25,18 +25,21 @@ short_bio: >-
   </p>
   <p>
     My research interests include：  
+    
     &emsp;&emsp;Computer Vision and Deep Learning  
+    
     &emsp;&emsp;Image Generation with Diffusion Model  
+    
     &emsp;&emsp;Multi-temporal and Multi-sensor Remote Sensing Image Change Detection  
   </p>
 
-portrait_url: /assets/images/photos/portrait.jpg
+portrait_url: /assets/images/badges/profile.png
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
 
 education:
 - name: LIESMARS, Wuhan University
-  logo: /assets/images/badges/Universitylogo.png
+  logo: /assets/images/badges/universitylogo.png
   position: M.S. in Photogrammetry and Remote Sensing
   date: Sep. 2022 - present
 
