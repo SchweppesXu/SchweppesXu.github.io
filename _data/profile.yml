@@ -21,7 +21,7 @@ linkedin: yiquan-xu-1a143a296
 
 short_bio: >-
   <p>
-    I am currently a third-year M.S. student at <a href="http://www.lmars.whu.edu.cn/en/">LIESMARS</a>, [Wuhan University](https://en.whu.edu.cn/), under the supervision of Prof. [Liangpei Zhang](https://scholar.google.com/citations?user=vzj2hcYAAAAJ) and Associate Prof. [Xin Su](https://scholar.google.com/citations?user=aSqNc38AAAAJ&hl=zh-CN). Before this, I received the B.S. degree from the [School of Geodesy and Geomatics](https://www.sgg.whu.edu.cn/), [Wuhan University](https://en.whu.edu.cn/), in 2022.
+    I am currently a third-year M.S. student at <a href="http://www.lmars.whu.edu.cn/en/">LIESMARS</a>, <a href="https://en.whu.edu.cn/">Wuhan University</a>, under the supervision of Prof. <a href="https://scholar.google.com/citations?user=vzj2hcYAAAAJ">Liangpei Zhang</a> and Associate Prof. a href="https://scholar.google.com/citations?user=aSqNc38AAAAJ&hl=zh-CN">Xin Su</a>. Before this, I received the B.S. degree from the <a href="https://www.sgg.whu.edu.cn/">School of Geodesy and Geomatics</a>, <a href="https://en.whu.edu.cn/">Wuhan University</a>, in 2022.
   </p>
   <p>
     My research interests include：  
@@ -52,11 +52,11 @@ education:
   date: Sep. 2018 - June. 2022
 
 experience:
- - name: [Geo-spatial Information Science](https://www.tandfonline.com/journals/tgsi20)
+ - name: <a href="https://www.tandfonline.com/journals/tgsi20">Geo-spatial Information Science</a>
    logo: /assets/images/badges/Taylor.png
    position: Student Editor
    date: Dec. 2023 -- Present
- - name: [Student Mental Health Education Center](https://xlzx.whu.edu.cn/) at Wuhan University
+ - name: <a href="https://xlzx.whu.edu.cn/">Student Mental Health Education Center</a> at Wuhan University
    logo: /assets/images/badges/mentalhealth.png
    position: Assistant Management
    date: July 2024 -- Present
