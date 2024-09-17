@@ -25,14 +25,13 @@ short_bio: >-
   </p>
   <p>
     My research interests include：  
-
-    
+ <p>
     &emsp;&emsp;Computer Vision and Deep Learning  
-
-    
+  </p>
+  <p>  
     &emsp;&emsp;Image Generation with Diffusion Model  
-
-    
+  </p>
+  <p>   
     &emsp;&emsp;Multi-temporal and Multi-sensor Remote Sensing Image Change Detection  
   </p>
 
@@ -53,7 +52,7 @@ education:
 
 experience:
  - name: Geo-spatial Information Science
-   logo: /assets/images/badges/GSIS.png
+   logo: /assets/images/badges/Taylor.png
    position: Student Editor
    date: Dec. 2023 -- Present
  - name: Student Mental Health Education Center at Wuhan University
