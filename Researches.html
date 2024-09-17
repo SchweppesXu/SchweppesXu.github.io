@@ -5,28 +5,31 @@ navbar_title: Researches
 body_attr: >-
   data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
-
-{% assign pubs_by_year = site.publications | sort }
+{% assign pubs_by_letter = site.publications | group_by_exp: "item", "item.folder_name | slice: 0, 1" | sort: "name" %}
 
 <div class="row">
+    <!-- 左侧内容显示区域 -->
     <div class="col-12 col-lg-10">
-        {% for year in pubs_by_year %}
-        {% assign num_papers = year.items | size %}
-        <h2 class="pt-4" id="year-{{ year.name }}">{{ year.name }}</h2>
+        {% for letter_group in pubs_by_letter %}
+        {% assign num_papers = letter_group.items | size %}
+        <h2 class="pt-4" id="letter-{{ letter_group.name | downcase }}">{{ letter_group.name }}</h2>
         <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
-            {% for item in year.items %}
+            <!-- 显示每个首字母组的所有出版物 -->
+            {% for item in letter_group.items %}
                 {% include widgets/publication_item.html item=item %}
             {% endfor %}
         </div>
         {% endfor %}
     </div>
 
+    <!-- 右侧导航栏 -->
     <div class="col-2 d-none d-lg-block">
-        <div id="navbar-year" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for year in pubs_by_year %}
-            <a class="nav-link d-block" href="#year-{{ year.name }}">{{ year.name }}</a>
+        <div id="navbar-letter" class="nav nav-pills flex-column sticky-top" style="top: 80px">
+            {% for letter_group in pubs_by_letter %}
+            <a class="nav-link d-block" href="#letter-{{ letter_group.name | downcase }}">{{ letter_group.name }}</a>
             {% endfor %}
         </div>
     </div>
 
 </div>
+
