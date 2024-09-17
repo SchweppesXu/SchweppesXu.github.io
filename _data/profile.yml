@@ -25,10 +25,13 @@ short_bio: >-
   </p>
   <p>
     My research interests include：  
+
     
     &emsp;&emsp;Computer Vision and Deep Learning  
+
     
     &emsp;&emsp;Image Generation with Diffusion Model  
+
     
     &emsp;&emsp;Multi-temporal and Multi-sensor Remote Sensing Image Change Detection  
   </p>
@@ -44,18 +47,18 @@ education:
   date: Sep. 2022 - present
 
 - name: SGG, Wuhan University
-  logo: /assets/images/badges/Universitylogo.png
+  logo: /assets/images/badges/universitylogo.png
   position: B.S. in Photogrammetry and Remote Sensing
   date: Sep. 2018 - June. 2022
 
 experience:
- - name: Taylor \& Francis Online Geo-spatial Information Science
+ - name: Geo-spatial Information Science
    logo: /assets/images/badges/GSIS.png
    position: Student Editor
    date: Dec. 2023 -- Present
  - name: Student Mental Health Education Center at Wuhan University
-   logo: /assets/images/badges/mental health.png
-   position: Research Intern
+   logo: /assets/images/badges/mentalhealth.png
+   position: Assistant Management
    date: July 2024 -- Present
 
 
