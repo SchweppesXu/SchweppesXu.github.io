@@ -5,16 +5,16 @@ navbar_title: Researches
 body_attr: >-
   data-spy="scroll" data-target="#navbar-year" data-offset="100"
 ---
-{% assign pubs_by_letter = site.publications | group_by_exp: "item", "item.folder_name | slice: 1, 2" | sort: "name" %}
+{% assign pubs_by_second_letter = site.publications | group_by_exp: "item", "item.folder_name | slice: 1, 1" | sort: "name" %}
 
 <div class="row">
     <!-- 左侧内容显示区域 -->
     <div class="col-12 col-lg-10">
-        {% for letter_group in pubs_by_letter %}
+        {% for letter_group in pubs_by_second_letter %}
         {% assign num_papers = letter_group.items | size %}
         <h2 class="pt-4" id="letter-{{ letter_group.name | downcase }}">{{ letter_group.name }}</h2>
         <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
-            <!-- 显示每个首字母组的所有出版物 -->
+            <!-- 显示每个第二个字母组的所有出版物 -->
             {% for item in letter_group.items %}
                 {% include widgets/publication_item.html item=item %}
             {% endfor %}
@@ -25,11 +25,10 @@ body_attr: >-
     <!-- 右侧导航栏 -->
     <div class="col-2 d-none d-lg-block">
         <div id="navbar-letter" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for letter_group in pubs_by_letter %}
+            {% for letter_group in pubs_by_second_letter %}
             <a class="nav-link d-block" href="#letter-{{ letter_group.name | downcase }}">{{ letter_group.name }}</a>
             {% endfor %}
         </div>
     </div>
-
 </div>
 
