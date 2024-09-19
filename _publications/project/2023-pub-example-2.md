@@ -1,21 +1,12 @@
 ---
-title:          "Pharetra Massa Massa Ultricies Mi Nisl Tincidunt"
+title:          "Theories of Video Remote Sensing Information Processing and Its Typical Geoscience Applications"
 date:           2023-01-21 00:01:00 +0800
 selected:       false
-pub:            "International Conference on Learning Representations (ICLR)"
+pub:            "Jan. 2023 -- Present"
 pub_date:       "2023"
 abstract: >-
-  Photo by Dessy Dimcheva on Unsplash. Viverra nibh cras pulvinar mattis nunc sed. Quam quisque id diam vel quam elementum pulvinar etiam. Ac felis donec et odio pellentesque. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit. A pellentesque sit amet porttitor eget. Magna fermentum iaculis eu non diam phasellus vestibulum lorem sed.
-
-cover:          /assets/images/covers/cover2.jpg
+  The key bottleneck issues that restrict the in-depth application of video remote sensing are insufficient information on complex and weak targets, insufficient mining of spatiotemporal variation characteristics, and unclear revelation of event evolution processes. Therefore, this project intends to systematically develop the theory and methods of video remote sensing information processing based on its characteristics of wide scene, high temporal sequence, and strong complementarity of temporal spatial information.
+cover:          /assets/images/covers/cover3.jpg
 authors:
-  - Charles Green (MIT)*
-  - John Doe*
-  - Robert White
-  - James Wang
-  - Your Name#
-links:
-  Paper: https://www.biorxiv.org
-  Code: https://github.com
-  Unsplash: https://unsplash.com/photos/orange-fruit-on-white-table-cloth-ISX_imp8t1o
+  - Guided by Prof. Liangpei Zhang and  Associate Prof. Xin Su from Wuhan University
 ---
