@@ -10,4 +10,5 @@ abstract: >-
 cover:          /assets/images/covers/cover3.jpg
 authors:
   - Guided by Prof. Liangpei Zhang and  Associate Prof. Xin Su from Wuhan University
+
 ---
