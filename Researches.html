@@ -5,14 +5,19 @@ navbar_title: Researches
 body_attr: >-
   data-spy="scroll" data-target="#navbar-folder" data-offset="100"
 ---
+{% assign pubs_by_folder = site.publications | group_by_exp: "item", "item.path | split: '/' | slice: -2, 1" %}
+
 <div class="row">
     <!-- 左侧内容显示区域 -->
     <div class="col-12 col-lg-10">
-        {% for item in site.publications %}
-        <h2 class="pt-4" id="folder-{{ item.folder_name | downcase }}">{{ item.folder_name }}</h2>
+        {% for folder_group in pubs_by_folder %}
+        {% assign folder_name = folder_group.name %}
+        <h2 class="pt-4" id="folder-{{ folder_name | downcase }}">{{ folder_name }}</h2>
         <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
-            <!-- 显示每个文件夹名称的出版物 -->
-            {% include widgets/publication_item.html item=item %}
+            <!-- 显示每个文件夹组的所有出版物 -->
+            {% for item in folder_group.items %}
+                {% include widgets/publication_item.html item=item %}
+            {% endfor %}
         </div>
         {% endfor %}
     </div>
@@ -20,10 +25,10 @@ body_attr: >-
     <!-- 右侧导航栏 -->
     <div class="col-2 d-none d-lg-block">
         <div id="navbar-folder" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for item in site.publications %}
-            <a class="nav-link d-block" href="#folder-{{ item.folder_name | downcase }}">{{ item.folder_name }}</a>
+            {% for folder_group in pubs_by_folder %}
+            {% assign folder_name = folder_group.name %}
+            <a class="nav-link d-block" href="#folder-{{ folder_name | downcase }}">{{ folder_name }}</a>
             {% endfor %}
         </div>
     </div>
 </div>
-
