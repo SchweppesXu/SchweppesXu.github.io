@@ -1,81 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Interests</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            color: #333;
-        }
-
-        .section-title {
-            font-size: 24px;
-            color: #444;
-            text-align: left;
-            margin-left: 10%;
-            margin-bottom: 10px;
-        }
-
-        .container {
-            padding: 20px 0;
-        }
-
-        /* Video Row Styling */
-        .video-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            justify-items: center;
-            width: 80%;
-            margin: 0 auto 40px auto;
-        }
-
-        .video-row video {
-            width: 100%;
-            max-width: 600px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Photo Grid Styling */
-        .photo-grid, .craft-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            justify-items: center;
-            width: 80%;
-            margin: 0 auto 40px auto;
-        }
-
-        .photo-grid img, .craft-grid img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Optional: hover effect */
-        video:hover, img:hover {
-            transform: scale(1.02);
-            transition: transform 0.3s ease;
-        }
-    </style>
-</head>
-<body>
-
-    <h1>My Interests</h1>
-
+---
+layout: default
+title : Researches
+navbar_title: Researches
+body_attr: >-
+  data-spy="scroll" data-target="#navbar-folder" data-offset="100"
+---
     <div class="container">
         <!-- First Row: Video Editing -->
         <div class="section-title">My Video Editing</div>
@@ -113,6 +42,3 @@
             < img src="assets/images/photo/6.png" alt="Handicraft 6">
         </div>
     </div>
-
-</body>
-</html>
