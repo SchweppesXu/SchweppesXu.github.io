@@ -1,56 +1,40 @@
 {% assign item = include.item %}
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
-        <div class="col-md-3 col-xl-2 mb-md-0 p-md-3">
-            {%- if item.cover -%}
-            <img data-src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="lazy w-100 rounded-sm" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
-            {%- else -%}
-            <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
-            {%- endif -%}
-        </div>
-        <div class="col-md-9 col-xl-10 p-3 pl-md-0">
-            <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
-            <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-            <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
-            <p class="mt-0 mb-0 small text-muted">{{ item.abstract }}</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                {% for link in item.links %}
-                {% if link[1].url %}
-                <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-                {% else %}
-                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-                {% endif %}
-                {% endfor %}
-            </p>
-
-        </div>
+        <!-- 判断媒体类型并设置布局 -->
+        {% if item.video_url %}
+            <!-- 如果是视频，每行显示两个 -->
+            <div class="col-md-6 mb-md-0 p-md-3">
+                <video class="w-100 rounded-sm media-item" controls>
+                    <source src="{{ item.video_url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        {% else %}
+            <!-- 如果是图片，每行显示三张 -->
+            <div class="col-md-4 mb-md-0 p-md-3">
+                <img data-src="{{ item | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+            </div>
+        {% endif %}
     </div>
 </div>
 
-<div class="card w-100 d-md-none border-top-0 border-right-0 border-left-0 rounded-0" style="overflow-y: scroll;">
-    {%- if item.cover -%}
-    <img data-src="{{ item.cover | relative_url }}" alt="{{ item.title }}" class="lazy card-img w-100" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
-    {%- else -%}
-    <svg class="bubble-visual-hash lazy w-100 rounded-sm" data-bubble-visual-hash="{{ item.id }}" viewBox="0 0 300 200"></svg>
-    {%- endif -%}
-    <div class="card-img-overlay d-flex align-items-start flex-column" style="background-color: rgba(255, 255, 255, 0.85);">
-        <div class="mb-auto"></div>
-        <div>
-            <h5 class="mt-0 mb-1 font-weight-normal">{{ item.title }}</h5>
-            <p class="mt-0 mb-0 small">{% include widgets/author_list.html authors=item.authors %}</p>
-            <p class="mt-0 mb-0 small">{{item.pub_pre}}<i>{{ item.pub }}</i>{{ item.pub_post }} {{ item.pub_date }} {{ item.pub_last }}</p>
-            <p class="mt-0 mb-0 small text-muted d-none d-sm-block">{{ item.abstract }}</p>
-            
-            <p class="small pb-0 mb-0 lh-125 text-muted abstract-links">
-                {% for link in item.links %}
-                {% if link[1].url %}
-                <a target="{{ link[1]['target'] }}" href="{{ link[1]['url'] }}">[{{ link[0] }}]</a>
-                {% else %}
-                <a target="_blank" href="{{ link[1] }}">[{{ link[0] }}]</a>
-                {% endif %}
-                {% endfor %}
-            </p>
-        </div>
-    </div>
+<div class="card w-100 d-md-none border-top-0 border-right-0 border-left-0 rounded-0">
+    <!-- 移动端统一显示一个媒体 -->
+    {% if item.video_url %}
+    <video class="w-100 media-item" controls>
+        <source src="{{ item.video_url }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    {% else %}
+    <img data-src="{{ item | relative_url }}" alt="Media" class="lazy card-img w-100 media-item" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
+    {% endif %}
 </div>
+
+<!-- 样式调整 -->
+<style>
+.media-item {
+    height: 200px; /* 固定高度，保持布局整齐 */
+    object-fit: cover; /* 保持宽高比并裁剪 */
+}
+</style>
