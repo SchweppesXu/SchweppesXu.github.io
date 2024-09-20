@@ -9,39 +9,18 @@ body_attr: >-
 
 <div class="row">
     <!-- 左侧内容显示区域 -->
-  <div class="col-12 col-lg-10">
-  {% for folder_group in pubs_by_folder %}
-    {% assign folder_name = folder_group.name %}
-    <h2 class="pt-4" id="folder-{{ folder_name | downcase }}">{{ folder_name }}</h2>
-    <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
-      <!-- 判断文件类型并选择显示图片或视频 -->
-      {% assign first_item = folder_group.items[0] %}
-      {% if first_item.url contains '.jpg' or first_item.url contains '.png' or first_item.url contains '.jpeg' %}
-        <!-- 显示图片 -->
-        <div class="image-gallery">
-          {% for item in folder_group.items %}
-            < img src="{{ item.url }}" alt="{{ item.title }}" class="img-fluid">
-          {% endfor %}
+    <div class="col-12 col-lg-10">
+        {% for folder_group in pubs_by_folder %}
+        {% assign folder_name = folder_group.name %}
+        <h2 class="pt-4" id="folder-{{ folder_name | downcase }}">{{ folder_name }}</h2>
+        <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+            <!-- 显示每个文件夹组的所有出版物 -->
+            {% for item in folder_group.items %}
+                {% include widgets/creativity_item.html item=item %}
+            {% endfor %}
         </div>
-      {% elsif first_item.url contains '.mp4' or first_item.url contains '.webm' or first_item.url contains '.ogg' %}
-        <!-- 显示视频 -->
-        <div class="video-gallery">
-          {% for item in folder_group.items %}
-            <video controls>
-              <source src="{{ item.url }}" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          {% endfor %}
-        </div>
-      {% else %}
-        <!-- 显示出版物（默认情况） -->
-        {% for item in folder_group.items %}
-          {% include widgets/publication_item.html item=item %}
         {% endfor %}
-      {% endif %}
     </div>
-  {% endfor %}
-</div>
 
     <!-- 右侧导航栏 -->
     <div class="col-2 d-none d-lg-block">
