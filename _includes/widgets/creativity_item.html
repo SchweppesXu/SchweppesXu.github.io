@@ -1,38 +1,42 @@
 {% assign item = include.item %}
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
-        <!-- 每行显示两个视频或三张图片 -->
-        <div class="col-md-6 mb-md-0 p-md-3">
-            {%- if item.video_url -%}
-            <!-- 如果是视频，显示视频 -->
-            <video class="w-100 rounded-sm media-item" controls>
-                <source src="{{ item.video_url }}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            {%- else -%}
-            <!-- 如果是图片，显示图片 -->
-            <img data-src="{{ item | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
-            {%- endif -%}
-        </div>
+        <!-- 判断 cover 是否为视频（通过扩展名） -->
+        {% if item.cover contains '.mp4' %}
+            <!-- 如果是视频，每行显示两个 -->
+            <div class="col-md-6 mb-md-0 p-md-3">
+                <video class="w-100 rounded-sm media-item" controls>
+                    <source src="{{ item.cover | relative_url }}" type="video/mp4">
+                    <!-- 如果视频无法加载，显示错误提示 -->
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        {% else %}
+            <!-- 如果是图片，每行显示三张 -->
+            <div class="col-md-4 mb-md-0 p-md-3">
+                <img data-src="{{ item.cover | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover | relative_url }}">
+            </div>
+        {% endif %}
     </div>
 </div>
 
 <div class="card w-100 d-md-none border-top-0 border-right-0 border-left-0 rounded-0">
-    <!-- 移动端每行一个媒体 -->
-    {%- if item.video_url -%}
+    <!-- 移动端统一显示一个媒体 -->
+    {% if item.cover contains '.mp4' %}
     <video class="w-100 media-item" controls>
-        <source src="{{ item.video_url }}" type="video/mp4">
+        <source src="{{ item.cover | relative_url }}" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-    {%- else -%}
-    <img data-src="{{ item | relative_url }}" alt="Media" class="lazy card-img w-100 media-item" src="{{ '/assets/images/empty_300x200.png' | relative_url }}">
-    {%- endif -%}
+    {% else %}
+    <img data-src="{{ item.cover | relative_url }}" alt="Media" class="lazy card-img w-100 media-item" src="{{ item.cover | relative_url }}">
+    {% endif %}
 </div>
 
 <!-- 样式调整 -->
 <style>
 .media-item {
-    height: 200px;
+    height: 200px; /* 固定高度，保持布局整齐 */
     object-fit: cover; /* 保持宽高比并裁剪 */
 }
 </style>
+
