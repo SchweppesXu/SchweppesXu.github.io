@@ -1,18 +1,17 @@
 {% assign item = include.item %}
 <div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
-        <!-- 判断 cover 是否为视频（通过扩展名） -->
+        <!-- 根据 cover 的类型调整列的占比 -->
         {% if item.cover contains '.mp4' %}
             <!-- 如果是视频，每行显示两个 -->
             <div class="col-md-6 mb-md-0 p-md-3">
                 <video class="w-100 rounded-sm media-item" controls>
                     <source src="{{ item.cover | relative_url }}" type="video/mp4">
-                    <!-- 如果视频无法加载，显示错误提示 -->
                     Your browser does not support the video tag.
                 </video>
             </div>
         {% else %}
-            <!-- 如果是图片，每行显示三张 -->
+            <!-- 如果是图片，每行显示三个 -->
             <div class="col-md-4 mb-md-0 p-md-3">
                 <img data-src="{{ item.cover | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover | relative_url }}">
             </div>
@@ -39,4 +38,5 @@
     object-fit: cover; /* 保持宽高比并裁剪 */
 }
 </style>
+
 
