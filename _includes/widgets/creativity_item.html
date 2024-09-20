@@ -9,6 +9,8 @@
                     <source src="{{ item.cover1 | relative_url }}" type="video/mp4">
                     Your browser does not support the video tag.
                 </video>
+            </div>
+            <div class="col-md-6 mb-md-0 p-md-3">
                 <video class="w-100 rounded-sm media-item" controls>
                     <source src="{{ item.cover2 | relative_url }}" type="video/mp4">
                     Your browser does not support the video tag.
@@ -18,7 +20,11 @@
             <!-- 如果是图片，每行显示三个 -->
             <div class="col-md-4 mb-md-0 p-md-3">
                 <img data-src="{{ item.cover1 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover1 | relative_url }}">
+            </div>
+            <div class="col-md-4 mb-md-0 p-md-3">
                 <img data-src="{{ item.cover2 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover2 | relative_url }}">
+            </div>
+            <div class="col-md-4 mb-md-0 p-md-3">
                 <img data-src="{{ item.cover3 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover3 | relative_url }}">
             </div>
         {% endif %}
