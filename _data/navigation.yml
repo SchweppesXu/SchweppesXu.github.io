@@ -3,5 +3,5 @@ pages:
   url: /
 - name: Researches
   url: /Researches
-- name: Creativity
+- name: Creativity <i class="fa fa-lightbulb-o" aria-hidden="true" /></i>
   url: /Creativity
