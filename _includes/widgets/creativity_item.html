@@ -1,5 +1,5 @@
 {% assign item = include.item %}
-<div class="d-none d-md-block transparent-bg">
+<div class="d-none d-md-block">
     <div class="row no-gutters border-bottom border-gray">
         <!-- 根据 cover 的类型调整列的占比 -->
         {% if item.cover1 contains '.mp4' %}
@@ -51,16 +51,8 @@
 
 <!-- 样式调整 -->
 <style>
-    .transparent-bg {
-        background-color: transparent; /* 设置背景为透明 */
-    }
-    .media-item {
-        height: 200px; /* 固定高度，保持布局整齐 */
-        object-fit: contain; /* 保持宽高比并裁剪 */
-    }
-    .border-gray {
-        border-color: #ccc !important; /* 给边框一个浅灰色，确保可见性 */
-    }
+.media-item {
+    height: 200px; /* 固定高度，保持布局整齐 */
+    object-fit: contain; /* 保持宽高比并裁剪 */
+}
 </style>
-
-
