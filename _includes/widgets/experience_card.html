@@ -4,6 +4,7 @@
     <!-- 第一张卡片 -->
     <div class="col-md-6">  <!-- 使用 col-md-6 表示在中等及以上屏幕宽度时，每个卡片占一半的宽度 -->
                   {% if site.data.profile.education %}
+                  <div class="col-md-12">
                   <h6>Education</h6>
                         <ul class="list-unstyled mb-1">
                             {% for item in site.data.profile.education %}
@@ -20,10 +21,11 @@
                             </li>
                             {% endfor %}
                         </ul>
+                  </div>
                   {% endif %}
             </div>
         </div>
-    <div class="col-md-6">
+    <div class="col-md-12">
         {% if site.data.profile.experience %}
             <h6>Experience</h6>
             <ul class="list-unstyled mb-1">
