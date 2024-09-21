@@ -84,20 +84,18 @@
             <div class="card-body p-4">
             <h6>Skills</h6>
             <div class="d-flex justify-content-center">
-                <ul class="list-unstyled mb-1 d-flex flex-wrap justify-content-center">
-                    <li class="mx-2">
-                        <img alt="NPM" src="https://raster.shields.io/badge/NPM-6.14.8-blue.svg" style="width: 100px;">
-                    </li>
-                    <li class="mx-2">
-                        <img alt="Maven" src="https://raster.shields.io/badge/Maven-3.1+-red.svg" style="width: 100px;">
-                    </li>
-                    <li class="mx-2">
-                        <img alt="Docker" src="https://raster.shields.io/badge/Docker-19.03.12-blue.svg" style="width: 100px;">
-                        <img src="https://img.shields.io/badge/-Java-black?style=flat-square&logo=java" alt="Java">
-                        <img src="https://img.shields.io/badge/-Node.js-black?style=flat-square&logo=node.js" alt="Node.js">
-                    </li>
-                    <!-- 你可以继续添加更多的 badges -->
-                </ul>
+                <div class="badge java"><i class="fab fa-java"></i> Java</div>
+                <div class="badge linux"><i class="fab fa-linux"></i> Linux</div>
+                <div class="badge vuejs"><i class="fab fa-vuejs"></i> VueJS</div>
+                <div class="badge nodejs"><i class="fab fa-node"></i> Node.js</div>
+                <div class="badge github"><i class="fab fa-github"></i> GitHub</div>
+                <div class="badge git"><i class="fab fa-git-alt"></i> Git</div>
+                <div class="badge markdown"><i class="fab fa-markdown"></i> Markdown</div>
+                <div class="badge html5"><i class="fab fa-html5"></i> HTML5</div>
+                <div class="badge bootstrap"><i class="fab fa-bootstrap"></i> Bootstrap</div>
+                <div class="badge mysql"><i class="fas fa-database"></i> MySQL</div>
+                <div class="badge mongodb"><i class="fas fa-database"></i> MongoDB</div>
+                <div class="badge oracle"><i class="fas fa-database"></i> Oracle</div>
             </div>
             </div>
         </div>
@@ -106,23 +104,25 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 <style>
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: black;
-    color: white;
-    margin: 2px;
-  }
-  .badge i {
-    margin-right: 5px;
-  }
+    .badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 5px 10px;
+        border-radius: 5px;
+        color: white;
+        margin: 2px;
+        font-size: 0.9em;
+    }
+    .java { background-color: #3E2723; }
+    .linux { background-color: #263238; }
+    .vuejs { background-color: #3E2723; }
+    .nodejs { background-color: #263238; }
+    .github { background-color: #212121; }
+    .git { background-color: #212121; }
+    .markdown { background-color: #263238; }
+    .html5 { background-color: #3E2723; }
+    .bootstrap { background-color: #263238; }
+    .mysql { background-color: #263238; }
+    .mongodb { background-color: #263238; }
+    .oracle { background-color: #263238; }
 </style>
-
-<div class="badge">
-  <i class="fab fa-java"></i> Java
-</div>
-<div class="badge">
-  <i class="fab fa-node"></i> Node.js
-</div>
