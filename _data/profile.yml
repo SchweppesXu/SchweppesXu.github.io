@@ -26,12 +26,6 @@ short_bio: >-
   <p>
     My research interests include：computer vision and deep learning, image generation with diffusion model, multi-temporal and multi-sensor remote sensing image change detection.
   </p>
-  <style type="text/css">
-      a:link {
-          color:black;
-          text-decoration:underline;
-      }
-  </style>
 
 portrait_url: /assets/images/badges/profile.png
 portrait_caption:
