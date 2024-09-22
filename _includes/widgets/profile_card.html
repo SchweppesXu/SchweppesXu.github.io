@@ -1,26 +1,43 @@
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    .profile-card {
+        background: white;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        width: 300px;
+        text-align: center;
+    }
+    .name {
+        font-size: 24px;
+        margin: 10px 0;
+    }
+    .text-profile-bio {
+        margin: 20px 0;
+        line-height: 1.6;
+    }
+</style>
 <div class="row">
     <div class="col">
         <div class="card border-0 shadow-sm bg-white">
             <div class="card-body p-5">
                 <div class="row">
                     <div class="col">
-                        <div class="h1 font-weight-bold">
-                            {{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small>
-                        </div>
-                        <div class="text-profile-position">
-                            {% for position in site.data.profile.positions %}
-                            {% if position.logo -%}
-                            <img src="{{ position.logo | relative_url }}" alt="Logo" class="inline-badge"/>
-                            {%- endif %}
-                            {{ position.name }}<br/>
-                            {% endfor %}
-                        </div>
-                        <div class="text-profile-bio mt-3">
-                            {{ site.data.profile.short_bio }}
-                        </div>
-                        {% if site.data.profile.cv_link %}
-                            <a target="_blank" href="{{ site.data.profile.cv_link }}"><i class="fas fa-file-alt"></i> Curriculum Vitae</a> <br/>
-                        {% endif %}
+                        <div class="profile-card">
+                            <div class="name">Hello! This is Yiquan Xu.</div>
+                            <div class="text-profile-bio mt-3">
+                                <div>(Schweppes, 徐怡泉)</div>
+                                {{ site.data.profile.short_bio }}
+                            </div>
+                        </div>    
+                    
                     </div>
                     {% if site.data.profile.portrait_url %}
                     <div class="col-md-auto">
