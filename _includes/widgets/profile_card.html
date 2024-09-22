@@ -17,7 +17,7 @@
                     </div>
                     {% if site.data.profile.portrait_url %}
                     <div class="col-md-auto">
-                        <figure class="figure d-flex align-items-center justify-content-center" style="min-height: 100vh;">
+                        <figure class="figure d-flex align-items-center justify-content-center">
                             <img 
                                 src="{{ site.data.profile.portrait_url | relative_url }}" 
                                 class="figure-img img-fluid img-thumbnail" 
@@ -32,7 +32,7 @@
                         <div class="row text-center" style="black">
                             <div class="col">
                                 <a class="pr-3 no-break target="_blank" href="mailto:{{ site.data.profile.email | encode_email }}">
-                                   <i class="fa-solid fa-envelope"></i> Email
+                                   <i class="fa-solid fa-envelope" style="color: black"></i> Email
                                 </a>
         
                                 {% if site.data.profile.gscholar %}
@@ -43,7 +43,7 @@
                                 
                                 {% if site.data.profile.github %}
                                 <a class="pr-3 no-break" target="_blank" href="https://github.com/{{ site.data.profile.github }}">
-                                    <i class="fab fa-github"></i> GitHub
+                                    <i class="fab fa-github" style="color: black"></i> GitHub
                                 </a>
                                 {% endif %}
         
@@ -55,13 +55,13 @@
         
                                 {% if site.data.profile.twitter %}
                                 <a class="pr-3 no-break" target="_blank" href="https://twitter.com/{{ site.data.profile.twitter }}">
-                                    <i class="fab fa-twitter"></i> Twitter
+                                    <i class="fab fa-twitter" style="color: black"></i> Twitter
                                 </a>
                                 {% endif %}
         
                                 {% if site.data.profile.linkedin %}
                                 <a class="pr-3 no-break" target="_blank" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
-                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                    <i class="fab fa-linkedin" style="color: black"></i> LinkedIn
                                 </a>
                                 {% endif %}
         
