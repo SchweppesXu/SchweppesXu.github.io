@@ -26,13 +26,13 @@ short_bio: >-
   <p style="line-height: 2;">
     My research interests include：
   </p>
-  <p style="line-height: 2; text-indent: 45px;color:black">
+  <p style="text-indent: 45px;color:black">
     computer vision and deep learning
   </p>
-  <p style="line-height: 2; text-indent: 45px;color:black">
+  <p style="text-indent: 45px;color:black">
     image generation with diffusion model
   </p>
-  <p style="line-height: 2; text-indent: 45px;color:black">
+  <p style="text-indent: 45px;color:black">
     multi-temporal and multi-sensor remote sensing image change detection
   </p>
 
