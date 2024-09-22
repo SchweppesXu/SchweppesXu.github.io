@@ -17,7 +17,7 @@
                     </div>
                     {% if site.data.profile.portrait_url %}
                     <div class="col-md-auto">
-                        <figure class="figure d-flex align-items-center justify-content-center">
+                        <figure class="figure d-flex align-items-center justify-content-center" style="min-height: 20vh>
                             <img 
                                 src="{{ site.data.profile.portrait_url | relative_url }}" 
                                 class="figure-img img-fluid img-thumbnail" 
@@ -29,7 +29,7 @@
                             <figcaption class="figure-caption text-right"></figcaption>
                         </figure>
                         <hr />
-                        <div class="row text-center" style="black">
+                        <div class="row text-center" style="color: black>
                             <div class="col">
                                 <a class="pr-3 no-break target="_blank" href="mailto:{{ site.data.profile.email | encode_email }}">
                                    <i class="fa-solid fa-envelope" style="color: black"></i> Email
