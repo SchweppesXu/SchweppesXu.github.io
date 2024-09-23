@@ -42,7 +42,9 @@
                             >
                             <figcaption class="figure-caption text-right"></figcaption>
                         </figure>
-
+                        <center style="line-height: 2;">
+                            <a href="{{ site.data.profile.cv }}" class="button">Curriculum Vitae</a>
+                        </center>
                         <div class="row" style="line-height: 2; display: flex; justify-content: center;" >
                             <a class="pr-3 no-break" target="_blank" style="color: grey" href="mailto:{{ site.data.profile.email | encode_email }}" >
                                <i class="fa-solid fa-envelope" style="color: grey"></i>
@@ -58,9 +60,7 @@
                             </a>
                         </div>
 
-                        <center style="line-height: 2;">
-                            <a href="{{ site.data.profile.cv }}" class="button">Curriculum Vitae</a>
-                        </center>
+                
                         
                     </div>
                     {% endif %}
