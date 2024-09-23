@@ -26,16 +26,19 @@ short_bio: >-
   <p style="line-height: 2;">
     My research interests include：
   </p>
-  <p style="text-indent: 45px;">
+  <ul>
+  <li>
     computer vision and <b style="color:black">deep learning</b>
-  </p>
-  <p style="text-indent: 45px;">
+  </li>
+  <li>
     <b style="color:black">image generation</b> with <b style="color:black">diffusion model</b>
-  </p>
-  <p style="text-indent: 45px;">
+  </li>
+  <li>
     multi-temporal and <b style="color:black">multi-sensor</b> remote sensing image <b style="color:black">change detection</b>
-  </p>
+  </li>
+  </ul>
 
+  
 portrait_url: /assets/images/badges/profile.png
 portrait_caption:
 # comment it out to disable).
