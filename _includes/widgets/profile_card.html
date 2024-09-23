@@ -9,7 +9,7 @@
         text-align: center;
         border-radius: 5px;
         box-sizing: border-box;
-        border: 2px solid grey;
+        border: 1px solid grey;
     }
 </style>
 <div class="row">
@@ -43,12 +43,12 @@
                             <figcaption class="figure-caption text-right"></figcaption>
                         </figure>
 
-                        <center>
+                        <center style="line-height: 2;">
                             <a href="{{ site.data.profile.cv }}" class="button">Curriculum Vitae</a>
                         </center>
-                        <div class="row">
+                        <div class="row" style="line-height: 2;">
                             <center>
-                            <a class="pr-3 no-break" target="_blank" style="color: grey" href="mailto:{{ site.data.profile.email | encode_email }}" margin-left: "10px;">
+                            <a class="pr-3 no-break" target="_blank" style="color: grey" href="mailto:{{ site.data.profile.email | encode_email }}" >
                                <i class="fa-solid fa-envelope" style="color: grey"></i> Email
                             </a>
                             <a class="pr-3 no-break" target="_blank" style="color: grey" href="https://github.com/{{ site.data.profile.github }}">
@@ -60,7 +60,7 @@
                             <a class="pr-3 no-break" target="_blank" style="color: grey" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
                                 <i class="fab fa-linkedin" style="color: grey"></i> LinkedIn
                             </a>
-                            </center>center>
+                            </center>
                         </div>
                     </div>
                     {% endif %}
