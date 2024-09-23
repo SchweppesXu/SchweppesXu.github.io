@@ -155,37 +155,3 @@
         </div>
     </div>
 </div>
-
-{% assign publications = include.publications %}
-<div class="my-3 p-0 bg-white shadow-sm rounded-sm">
-    <h6 class="border-bottom border-gray p-3 mb-0">
-        {% if include.title %}{{ include.title }}{% else %}<i class="fas fa-star" style="color: blue;"></i> Selected Recent Publications{% endif %} 
-    </h6>
-        {% include widgets/publication_item.html item=item %}    
-    <h6 class="d-block p-3 mt-0 text-right">
-        <a href="{{ 'Researches' | relative_url }}">All researches <i class="fas fa-angle-double-right"></i></a>
-    </h6>
-</div>
-    
-<div class="row mt-3">
-    <!-- 第3张卡片 -->
-    <div class="col-md-12">  <!-- 使用 col-md-6 表示在中等及以上屏幕宽度时，每个卡片占一半的宽度 -->
-        <div class="card border-0 shadow-sm bg-white">
-            <div class="card-body p-4">
-            {% if site.data.profile.awards %}
-                <h6>Honors & Awards</h6>
-                <ul class="list small pl-3 mb-1">
-                    {% for item in site.data.profile.awards %}
-                    <li>
-                        <div class="d-flex">
-                            <div>{{ item.name }}</div>
-                            <div class="ml-auto mt-auto no-break"><em>{{ item.date }}</em></div>
-                        </div>
-                    </li>
-                    {% endfor %}
-                </ul>
-            {% endif %}
-            </div>
-        </div>
-    </div>
-</div>
