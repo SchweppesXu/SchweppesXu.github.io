@@ -27,7 +27,7 @@ short_bio: >-
     My research interests include：
   </p>
   <ul>
-  <li>
+  <li style="line-height: 2;">
     computer vision and <b style="color:black">deep learning</b>
   </li>
   <li style="line-height: 2;">
