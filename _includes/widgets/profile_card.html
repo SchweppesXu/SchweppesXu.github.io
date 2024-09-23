@@ -1,3 +1,17 @@
+<style>
+    .button {
+        display: block;
+        width: calc(100% - 40px);
+        padding: 10px;
+        margin: 10px auto;
+        background: #000;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+</style>
 <div class="row">
     <div class="col">
         <div class="card border-0 shadow-sm bg-white">
@@ -11,9 +25,6 @@
                         <div class="text-profile-bio mt-3 text-muted">
                             {{ site.data.profile.short_bio }}
                         </div>
-                        {% if site.data.profile.cv_link %}
-                            <a target="_blank" href="{{ site.data.profile.cv_link }}"><i class="fas fa-file-alt"></i> Curriculum Vitae</a> <br/>
-                        {% endif %}
                     </div>
                     {% if site.data.profile.portrait_url %}
                     <div class="col-md-auto">
