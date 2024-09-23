@@ -11,6 +11,13 @@
         box-sizing: border-box;
         border: 1px solid grey;
     }
+    .icons {
+        display: flex;
+        justify-content: space-between; /* This spreads the icons evenly */
+        align-items: center;
+        padding: 0;
+        margin: 10px 0;
+    }
 </style>
 <div class="row">
     <div class="col">
@@ -45,6 +52,8 @@
                         <center style="line-height: 2;">
                             <a href="{{ site.data.profile.cv }}" class="button">Curriculum Vitae</a>
                         </center>
+
+                        <div class="icons">
                         <div class="row" style="line-height: 2; display: flex; justify-content: center;" >
                             <a class="pr-3 no-break" target="_blank" style="color: grey" href="mailto:{{ site.data.profile.email | encode_email }}" >
                                <i class="fa-solid fa-envelope" style="color: grey"></i>
@@ -59,9 +68,7 @@
                                 <i class="fab fa-linkedin" style="color: grey"></i>
                             </a>
                         </div>
-
-                
-                        
+                        </div>
                     </div>
                     {% endif %}
         
