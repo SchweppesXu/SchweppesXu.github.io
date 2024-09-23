@@ -21,7 +21,25 @@
                         <div class="h1 font-weight-bold">
                             {{ site.data.profile.primary_name }} <small>{{ site.data.profile.secondary_name }}</small>
                         </div>
-                        <div><small>(Schweppes, 徐怡泉)</small></div>
+                        <div><small>
+                            (Schweppes, 徐怡泉)
+                                <a class="pr-3 no-break target="_blank" style="color: grey" href="mailto:{{ site.data.profile.email | encode_email }}">
+                                   <i class="fa-solid fa-envelope" style="color: grey"></i> Email
+                                </a>
+                                <a class="pr-3 no-break" target="_blank" style="color: grey" href="https://github.com/{{ site.data.profile.github }}">
+                                    <i class="fab fa-github" style="color: grey"></i> GitHub
+                                </a>
+                                <a class="pr-3 no-break" target="_blank" style="color: grey" href="https://twitter.com/{{ site.data.profile.twitter }}">
+                                    <i class="fab fa-twitter" style="color: grey"></i> Twitter
+                                </a>
+                                <a class="pr-3 no-break" target="_blank" style="color: grey" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
+                                    <i class="fab fa-linkedin" style="color: grey"></i> LinkedIn
+                                </a>
+                                <a class="pr-3 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
+                                    <i class="fab fa-orcid"></i> ORCID
+                                </a>
+                        </small>
+                        </div>
                         <div class="text-profile-bio mt-3 text-muted">
                             {{ site.data.profile.short_bio }}
                         </div>
@@ -43,53 +61,6 @@
                         <center>
                             <a href="{{ site.data.profile.cv }}" class="button">Curriculum Vitae</a>
                         </center>
-
-
-
-                        
-                        <div class="row text-center" style="color: grey; line-height: 2;">
-                            <div class="col">
-                                <a class="pr-3 no-break target="_blank" style="color: grey" href="mailto:{{ site.data.profile.email | encode_email }}">
-                                   <i class="fa-solid fa-envelope" style="color: grey"></i> Email
-                                </a>
-        
-                                {% if site.data.profile.gscholar %}
-                                <a class="pr-3 no-break" target="_blank" style="color: grey" href="https://scholar.google.com/citations?user={{ site.data.profile.gscholar }}&hl=en">
-                                    <i class="fab fa-google-scholar"></i> Google Scholar
-                                </a>
-                                {% endif %}
-                                
-                                {% if site.data.profile.github %}
-                                <a class="pr-3 no-break" target="_blank" style="color: grey" href="https://github.com/{{ site.data.profile.github }}">
-                                    <i class="fab fa-github" style="color: grey"></i> GitHub
-                                </a>
-                                {% endif %}
-        
-                                {% if site.data.profile.wechat_qrcode %}
-                                <a class="pr-3 no-break" data-toggle="modal" data-target="#modal-wechat">
-                                    <i class="fab fa-weixin"></i> WeChat
-                                </a>
-                                {% endif %}
-        
-                                {% if site.data.profile.twitter %}
-                                <a class="pr-3 no-break" target="_blank" style="color: grey" href="https://twitter.com/{{ site.data.profile.twitter }}">
-                                    <i class="fab fa-twitter" style="color: grey"></i> Twitter
-                                </a>
-                                {% endif %}
-        
-                                {% if site.data.profile.linkedin %}
-                                <a class="pr-3 no-break" target="_blank" style="color: grey" href="https://www.linkedin.com/in/{{ site.data.profile.linkedin }}">
-                                    <i class="fab fa-linkedin" style="color: grey"></i> LinkedIn
-                                </a>
-                                {% endif %}
-        
-                                {% if site.data.profile.orcid %}
-                                <a class="pr-3 no-break" target="_blank" href="https://orcid.org/{{ site.data.profile.orcid }}">
-                                    <i class="fab fa-orcid"></i> ORCID
-                                </a>
-                                {% endif %}
-                            </div>
-                        </div>
                     </div>
                     {% endif %}
         
