@@ -20,7 +20,7 @@
             <!-- 如果是图片，每行显示三个 -->
             <div class="col-md-4 mb-md-0 p-md-3">
                 <div class="box">
-                  <img src="item.cover1" alt="长图">
+                  <img data-src="{{ item.cover2 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover2 | relative_url }}>
                   <div class="box-top"></div>
                   <div class="box-bottom"></div>
                 </div>
