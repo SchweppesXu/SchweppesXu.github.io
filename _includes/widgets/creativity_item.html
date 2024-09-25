@@ -18,18 +18,22 @@
             </div>
         {% elsif item.cover1 contains 'design' %}
             <!-- 如果是图片，每行显示三个 -->
-            <div class="col-md-4 mb-md-0 p-md-3">
-                <div class="box">
-                  <img data-src="{{ item.cover1 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover1 | relative_url }}>
-                  <div class="box-top"></div>
-                  <div class="box-bottom"></div>
+            <div class="row">
+                <div class="col-md-4 mb-md-0 p-md-3">
+                    <div class="image-container">
+                        <img data-src="{{ item.cover1 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover1 | relative_url }}">
+                    </div>
                 </div>
-            </div>
-            <div class="col-md-4 mb-md-0 p-md-3">
-                <img data-src="{{ item.cover2 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover2 | relative_url }}">
-            </div>
-            <div class="col-md-4 mb-md-0 p-md-3">
-                <img data-src="{{ item.cover3 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover3 | relative_url }}">
+                <div class="col-md-4 mb-md-0 p-md-3">
+                    <div class="image-container">
+                        <img data-src="{{ item.cover2 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover2 | relative_url }}">
+                    </div>
+                </div>
+                <div class="col-md-4 mb-md-0 p-md-3">
+                    <div class="image-container">
+                        <img data-src="{{ item.cover3 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover3 | relative_url }}">
+                    </div>
+                </div>
             </div>
         {% else %}
             <!-- 如果是图片，每行显示三个 -->
@@ -71,6 +75,31 @@
 
 <!-- 样式调整 -->
 <style>
+    
+.image-container {
+    overflow: hidden; /* 隐藏超出容器的内容 */
+    height: 300px; /* 根据需要调整 */
+    position: relative; /* 使绝对定位生效 */
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* 宽度填满容器 */
+    height: auto; /* 保持纵横比 */
+    animation: slide 10s linear infinite; /* 添加动画 */
+}
+
+@keyframes slide {
+    0% {
+        top: 0; /* 起始位置 */
+    }
+    100% {
+        top: -100%; /* 向上滚动，100%为容器高度 */
+    }
+}
 .media-item {
     height: 200px; /* 固定高度，保持布局整齐 */
     object-fit: contain; /* 保持宽高比并裁剪 */
