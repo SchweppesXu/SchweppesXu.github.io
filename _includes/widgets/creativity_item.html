@@ -18,7 +18,7 @@
             </div>
         {% elsif item.cover1 contains '/design/' %}
             <!-- 如果是图片，每行显示三个 -->
-            <div class="row">
+            
                 <div class="col-md-4 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover1 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover1 | relative_url }}">
@@ -34,7 +34,7 @@
                         <img data-src="{{ item.cover3 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover3 | relative_url }}">
                     </div>
                 </div>
-            </div>
+            
         {% else %}
             <!-- 如果是图片，每行显示三个 -->
             <div class="col-md-4 mb-md-0 p-md-3">
