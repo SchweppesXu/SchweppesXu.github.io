@@ -1,5 +1,5 @@
 {% assign item = include.item %}
-<div class="d-none d-md-block">
+<div class="d-none d-md-block transparent-div">
       <div class="row no-gutters border-bottom border-gray">
       <p class="caption">With a ball of yarn and two needles, weaving becomes a form of yoga for the soul, as I craft adorable and heartwarming dolls with my own hands.</p>
      <div class="image-grid">
@@ -49,6 +49,9 @@
 
 
 <style>
+.transparent-div {
+    background-color: transparent; /* 完全透明 */
+}
 .image-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3列布局，平均分配宽度 */
