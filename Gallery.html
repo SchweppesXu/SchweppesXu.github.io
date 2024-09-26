@@ -9,7 +9,7 @@ body_attr: >-
 
 <div class="row">
     <!-- 左侧内容显示区域 -->
-    <div class="col-12 col-lg-10">
+    <div class="col-12 col-lg-12">
         {% for folder_group in pubs_by_folder %}
         {% assign folder_name = folder_group.name %}
         <h2 class="pt-4" id="folder-{{ folder_name | downcase }}">{{ folder_name }}</h2>
@@ -22,13 +22,5 @@ body_attr: >-
         {% endfor %}
     </div>
 
-    <!-- 右侧导航栏 -->
-    <div class="col-2 d-none d-lg-block">
-        <div id="navbar-folder" class="nav nav-pills flex-column sticky-top" style="top: 80px">
-            {% for folder_group in pubs_by_folder %}
-            {% assign folder_name = folder_group.name %}
-            <a class="nav-link d-block" href="#folder-{{ folder_name | downcase }}">{{ folder_name }}</a>
-            {% endfor %}
-        </div>
-    </div>
+
 </div>
