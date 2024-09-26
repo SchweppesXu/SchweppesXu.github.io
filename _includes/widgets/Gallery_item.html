@@ -1,6 +1,6 @@
 {% assign item = include.item %}
 <div class="d-none d-md-block">
-      <div class="row no-gutters "  style="color: rgb(255 0 153 / 0%)">
+      <div class="row no-gutters border-bottom border-gray">
       <p class="caption">With a ball of yarn and two needles, weaving becomes a form of yoga for the soul, as I craft adorable and heartwarming dolls with my own hands.</p>
      <div class="image-grid">
         <img data-src="{{ item.cover7_5 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover7_5 | relative_url }}">
@@ -62,6 +62,7 @@
     grid-template-columns: repeat(3, 1fr); /* 3列布局，平均分配宽度 */
     grid-template-rows: repeat(2, 300px);  /* 固定两行，每行高度为300px */
     grid-gap: 10px;  /* 图片之间的间距 */
+      background-color: rgba(0, 0, 0, 0); /* 设置为半透明的黑色背景 */
 }
 
 .image-grid img {
