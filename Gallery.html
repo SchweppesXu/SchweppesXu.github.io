@@ -8,8 +8,7 @@ body_attr: >-
 {% assign pubs_by_folder = site.Gallery | group_by_exp: "item", "item.path | split: '/' | slice: -2, 1" %}
 
 <div class="row">
-    <!-- 左侧内容显示区域 -->
-    <div class="col-12 col-lg-12">
+    <!-- 左侧内容显示区域 -->   
         {% for folder_group in pubs_by_folder %}
         {% assign folder_name = folder_group.name %}
         <h2 class="pt-4" id="folder-{{ folder_name | downcase }}">{{ folder_name }}</h2>
@@ -20,7 +19,4 @@ body_attr: >-
             {% endfor %}
         </div>
         {% endfor %}
-    </div>
-
-
 </div>
