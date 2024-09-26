@@ -96,9 +96,9 @@
 <style>
     
 .image-container {
-    overflow: hidden;
+    overflow: hidden; /* 隐藏超出容器的内容 */
     height: 300px; /* 根据需要调整 */
-    position: relative;
+    position: relative; /* 使绝对定位生效 */
 }
 
 .image-container img {
@@ -106,9 +106,22 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    height: auto;
-    animation: slide 10s linear infinite;
+    width: 100%; /* 宽度填满容器 */
+    height: auto; /* 保持纵横比 */
+    animation: slide 10s linear infinite; /* 默认动画 */
+}
+
+.image-container:hover img {
+    animation-play-state: running; /* 鼠标悬停时继续滚动 */
+}
+
+@keyframes slide {
+    0% {
+        top: 0; /* 起始位置 */
+    }
+    100% {
+        top: -100%; /* 向上滚动 */
+    }
 }
 
 .original-link {
@@ -123,6 +136,7 @@
     color: #000; /* 字体颜色 */
     z-index: 1; /* 确保链接在图片上方 */
 }
+
 .media-item {
     height: 200px; /* 固定高度，保持布局整齐 */
     object-fit: contain; /* 保持宽高比并裁剪 */
