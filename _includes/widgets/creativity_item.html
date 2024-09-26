@@ -22,36 +22,42 @@
                     <div class="image-container">
                         <img data-src="{{ item.cover4 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover1 | relative_url }}">
                         <a href="{{ item.original_link1 }}" class="original-link">Link</a> <!-- 添加原文链接 -->
+                        <div class="progress-bar" id="progress-bar1"></div> <!-- 添加进度条 -->
                     </div>
                 </div>
                 <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover5 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover2 | relative_url }}">
                         <a href="{{ item.original_link2 }}" class="original-link">Link</a> <!-- 添加原文链接 -->
+                        <div class="progress-bar" id="progress-bar2"></div> <!-- 添加进度条 -->
                     </div>
                 </div>
                 <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover3 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover3 | relative_url }}">
                         <a href="{{ item.original_link3 }}" class="original-link">Link</a> <!-- 添加原文链接 -->
+                        <div class="progress-bar" id="progress-bar3"></div> <!-- 添加进度条 -->
                     </div>
                 </div>
                     <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover1 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover4 | relative_url }}">
                         <a href="{{ item.original_link4 }}" class="original-link">Link</a> <!-- 添加原文链接 -->
+                        <div class="progress-bar" id="progress-bar4"></div> <!-- 添加进度条 -->
                     </div>
                 </div>
                 <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover2 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover5 | relative_url }}">
                         <a href="{{ item.original_link5 }}" class="original-link">Link</a> <!-- 添加原文链接 -->
+                        <div class="progress-bar" id="progress-bar5"></div> <!-- 添加进度条 -->
                     </div>
                 </div>
                 <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover6 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover6 | relative_url }}">
                         <a href="{{ item.original_link6 }}" class="original-link">Link</a> <!-- 添加原文链接 -->
+                        <div class="progress-bar" id="progress-bar6"></div> <!-- 添加进度条 -->
                     </div>
                 </div>
         {% else %}
@@ -108,11 +114,11 @@
     transform: translateX(-50%);
     width: 100%; /* 宽度填满容器 */
     height: auto; /* 保持纵横比 */
-    animation: slide 10s linear infinite; /* 默认动画 */
+    animation: slide 10s linear infinite paused; /* 默认动画状态为暂停 */
 }
 
 .image-container:hover img {
-    animation-play-state: running; /* 鼠标悬停时继续滚动 */
+    animation: slide 10s linear infinite; /* 鼠标悬停时开始滚动 */
 }
 
 @keyframes slide {
@@ -136,6 +142,22 @@
     color: #000; /* 字体颜色 */
     z-index: 1; /* 确保链接在图片上方 */
 }
+
+.progress-bar {
+    position: absolute;
+    top: 0; /* 默认位置在顶部 */
+    right: 10px; /* 距离右侧的距离 */
+    width: 5px; /* 进度条宽度 */
+    height: 100%; /* 进度条高度 */
+    background-color: rgba(0, 0, 0, 0.2); /* 背景色 */
+    z-index: 1; /* 确保在其他元素上方 */
+    transition: height 10s linear; /* 添加过渡效果 */
+}
+
+.image-container:hover .progress-bar {
+    height: 100%; /* 鼠标悬停时进度条填满 */
+}
+
 
 .media-item {
     height: 200px; /* 固定高度，保持布局整齐 */
