@@ -59,15 +59,15 @@
 <style>
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 设置3列布局 */
-    grid-template-rows: repeat(2, auto); /* 自动高度的两行 */
-    grid-gap: 10px; /* 图片之间的间距 */
+    grid-template-columns: repeat(3, 1fr); /* 3列布局，平均分配宽度 */
+    grid-template-rows: repeat(2, 300px);  /* 固定两行，每行高度为300px */
+    grid-gap: 10px;  /* 图片之间的间距 */
 }
 
 .image-grid img {
-    width: 100%;
-    height: auto; /* 保持图片比例 */
-    object-fit: cover; /* 图片适应格子的方式 */
+    width: 100%;     /* 图片宽度适应容器 */
+    height: 100%;    /* 图片高度适应容器 */
+    object-fit: cover; /* 保持比例并裁剪，使图片填满格子 */
 }
 
 .image-grid img:nth-child(1) {
@@ -81,4 +81,5 @@
     font-style: italic;
     color: #555;
 }
+
 </style>
