@@ -12,7 +12,7 @@ body_attr: >-
         {% for folder_group in pubs_by_folder %}
         {% assign folder_name = folder_group.name %}
         <h2 class="pt-4" id="folder-{{ folder_name | downcase }}">{{ folder_name }}</h2>
-        <div class="my-0 p-0 bg-white shadow-sm rounded-sm">
+        <div class="my-0 p-0 bg-transparent gy-5">
             <!-- 显示每个文件夹组的所有出版物 -->
             {% for item in folder_group.items %}
                 {% include widgets/Gallery_item.html item=item %}
