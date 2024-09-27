@@ -37,7 +37,7 @@
                         <img src="{{ item.logo | relative_url }}" alt="{{ item.name }}" style="width: 18px;" class="mr-1 mt-1">
                         <div class="media-body" style="line-height: 2;">
                             <div class="small" ><b>{{ item.name }}</b></div>
-                            <a class="gallery-link font-weight-bold" href="{{ 'Gallery' | relative_url }}" >Gallery <i class="fas fa-angle-double-right"></i></a >
+                            <a class="creation " href="{{ 'Creativity' | relative_url }}" >Creation <i class="fas fa-angle-double-right"></i></a >
                             <div class="small" style="color: grey;">{{ item.dept }}</div>
                             <div class="small d-flex">
                                 <div style="color: grey;">{{ item.position }}</div>
@@ -64,6 +64,13 @@
     .gallery-link {
       position: absolute;
       bottom: 0;
+      right: 0;
+      padding: 3px;
+      text-align: right;
+    }
+    .creation-link {
+      position: absolute;
+      top: 0;
       right: 0;
       padding: 3px;
       text-align: right;
