@@ -5,8 +5,9 @@ navbar_title: Researches
 body_attr: >-
   data-spy="scroll" data-target="#navbar-folder" data-offset="100"
 ---
-{% assign pubs_by_folder = site.publications | group_by_exp: "item", "item.path | split: '/' | slice: -2, 1" | replace_first: "resource", "project" | replace_first: "publication", "resource" | replace_first: "project", "publication"  %}
+{% assign sorted_pubs_by_folder = site.publications | group_by_exp: "item", "item.path | split: '/' | slice: -2, 1"  %}
 
+{% assign pubs_by_folder = sorted_pubs_by_folder | sort: "name.size" | reverse %}
 <div class="row">
     <!-- 左侧内容显示区域 -->
     <div class="col-12 col-lg-12">
