@@ -21,67 +21,57 @@
                <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover4 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover4 | relative_url }}">
-                    </div>
-                    <div  class="row">
-                    <div class="poster-footer">
-                        <hr>
-                        <a href="{{ item.original_link1 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
-                    </div>
+                        <div row>
+                        <div class="poster-footer">
+                            <hr>
+                            <a href="{{ item.original_link1 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
+                        </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover5 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover5 | relative_url }}">
-                    </div>
-                    <div  class="row">
-                    <div class="poster-footer">
-                        <hr>
-                        <a href="{{ item.original_link1 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
-                    </div>
+                        <div class="poster-footer">
+                            <hr>
+                            <a href="{{ item.original_link2 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover3 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover3 | relative_url }}">
-                    </div>
-                    <div  class="row">
-                    <div class="poster-footer">
-                        <hr>
-                        <a href="{{ item.original_link1 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
-                    </div>
+                        <div class="poster-footer">
+                            <hr>
+                            <a href="{{ item.original_link3 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
+                        </div>
                     </div>
                 </div>
                     <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover1 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover1 | relative_url }}">
-                    </div>
-                   <div  class="row">
-                    <div class="poster-footer">
-                        <hr>
-                        <a href="{{ item.original_link1 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
-                    </div>
+                        <div class="poster-footer">
+                            <hr>
+                            <a href="{{ item.original_link4 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover2 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover2 | relative_url }}">
-                    </div>
-                   <div  class="row">
-                    <div class="poster-footer">
-                        <hr>
-                        <a href="{{ item.original_link1 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
-                    </div>
+                        <div class="poster-footer">
+                            <hr>
+                            <a href="{{ item.original_link5 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
+                        </div>
                     </div>
                 </div>
                 <div class="col-md-2 mb-md-0 p-md-3">
                     <div class="image-container">
                         <img data-src="{{ item.cover6 | relative_url }}" alt="Media" class="lazy w-100 rounded-sm media-item" src="{{ item.cover6 | relative_url }}">
-                    </div>
-                 <div  class="row">
-                    <div class="poster-footer">
-                        <hr>
-                        <a href="{{ item.original_link1 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
-                    </div>
+                        <div class="poster-footer">
+                            <hr>
+                            <a href="{{ item.original_link6 }}" class="original-link font-weight-bold">Link<i class="fas fa-angle-double-right"></i></a > <!-- 添加原文链接 -->
+                        </div>
                     </div>
                 </div>
         {% else %}
@@ -102,14 +92,16 @@
 <!-- 样式调整 -->
 <style>
 
+.poster-footer hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
 
 .poster-footer a {
     color: blue; /* 链接颜色 */
-    position: absolute;
-      bottom: 10px;
-      right: 10px;
-      padding: 3px;
-      text-align: center;
+    
+    font-weight: bold;
 }    
 .image-container {
     overflow: hidden; /* 隐藏超出容器的内容 */
@@ -136,6 +128,18 @@
     }
 }
 
+.original-link {
+    position: absolute;
+    bottom: 10px; /* 根据需要调整位置 */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.7); /* 半透明背景 */
+    padding: 5px 10px; /* 内边距 */
+    border-radius: 5px; /* 圆角 */
+    text-decoration: none; /* 去掉下划线 */
+    color: #000; /* 字体颜色 */
+    z-index: 1; /* 确保链接在图片上方 */
+}
 
 
 .image-container:hover img {
@@ -152,6 +156,5 @@
   padding: 0;
 }
 
+
 </style>
-
-
