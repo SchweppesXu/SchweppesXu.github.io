@@ -12,7 +12,7 @@ abstract: >-
   This article proposes a CD network for optical and SAR images, named Diffpurifier. First, optical images are translated into SAR images using pre-trained denoising diffusion probabilistic models (DDPMs) and ordinary differential equations (ODEs) while simultaneously extracting multiscale features. Then, CD is performed under superpixel enhancement to improve the homogeneity of the CD maps. Diffpurifier not only integrates IT and feature extraction, simplifying the workflow, but also maintains high accuracy, stable training, and generalization to different types of data without the need for additional translation constraints. In comparative experiments on four public datasets, Diffpurifier outperforms the second-best method by an average of approximately 5% in terms of F1 -score, validating the effectiveness and robustness of the method.
 cover:          /assets/images/covers/cover1.jpg
 authors:
-  - Y.Xu
+  - <b>Y.Xu</b>
   - X.Su
   - L.Zhang
 links:
