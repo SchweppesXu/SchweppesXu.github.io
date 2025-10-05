@@ -21,7 +21,7 @@ linkedin: yiquan-xu-1a143a296
 
 short_bio: >-
   <p style="line-height: 2;">
-    I am currently a research assistant at <a href="https://sai.whu.edu.cn/" " style="color:black">the School of Artificial Intelligence</a>, <a href="https://en.whu.edu.cn/"" style="color:gray">Wuhan University</a>. Before this, I got my master's degree in 2025 from <a href="https://liesmars.whu.edu.cn/" " style="color:black">the State Key Laboratory of Surveying, Mapping and Remote Sensing Information Engineering</a>, <a href="https://en.whu.edu.cn/"" style="color:gray">Wuhan University</a>, advised by Prof. <a href="https://scholar.google.com/citations?user=vzj2hcYAAAAJ"" style="color:black"><u><b>Liangpei Zhang</u></b></a> and Associate Prof. <a href="https://scholar.google.com/citations?user=aSqNc38AAAAJ&hl=zh-CN"" style="color:black"><u><b>Xin Su</u></b></a>.
+    I am currently a research assistant at <a href="https://sai.whu.edu.cn/" " style="color:black"><b>the School of Artificial Intelligence</b></a>, <a href="https://en.whu.edu.cn/"" style="color:gray">Wuhan University</a>. Before this, I got my master's degree in 2025 from <a href="https://liesmars.whu.edu.cn/" " style="color:black"><b>the State Key Laboratory of Surveying, Mapping and Remote Sensing Information Engineering</b></a>, <a href="https://en.whu.edu.cn/"" style="color:gray">Wuhan University</a>, advised by Prof. <a href="https://scholar.google.com/citations?user=vzj2hcYAAAAJ"" style="color:black"><u><b>Liangpei Zhang</u></b></a> and Associate Prof. <a href="https://scholar.google.com/citations?user=aSqNc38AAAAJ&hl=zh-CN"" style="color:black"><u><b>Xin Su</u></b></a>.
   </p>
   <p>
     My research interests include：
@@ -47,7 +47,7 @@ education:
 - name: LIESMARS, Wuhan University
   logo: /assets/images/badges/universitylogo.png
   position: M.S. in Photogrammetry and Remote Sensing
-  date: Sep. 2022 - Present
+  date: Sep. 2022 - Sep. 2025
 
 - name: SGG, Wuhan University
   logo: /assets/images/badges/universitylogo.png
@@ -62,7 +62,7 @@ experience:
  - name: Student Mental Health Education Center, Wuhan University
    logo: /assets/images/badges/mentalhealth.png
    position: Assistant Management
-   date: July 2024 -- Present
+   date: July 2024 -- July 2025
 
 
 awards:
