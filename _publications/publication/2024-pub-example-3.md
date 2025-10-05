@@ -16,6 +16,6 @@ authors:
   - X.Su
   - L.Zhang
 links:
-  Code: https://github.com/SchweppesXu/Diffpurifier
   Paper: https://ieeexplore.ieee.org/document/11029277
+  Code: https://github.com/SchweppesXu/Diffpurifier
 ---
